@@ -1,9 +1,9 @@
 //Задание 1
-let a = 10;
-alert(a);
+let x = 10;
+alert(x);
 
-a = 20;
-alert(a);
+x = 20;
+alert(x);
 
 //Задание 2
 const firstIphone = 2005;
@@ -26,9 +26,9 @@ let result = 2 ** 5;
 alert(result);
 
 //Задание 6
-let a = 9;
-let b = 2;
-alert(a % b);
+let r = 9;
+let e = 2;
+alert(r % e);
 
 //Задание 7
 let num = 1;
