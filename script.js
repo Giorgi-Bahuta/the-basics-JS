@@ -17,3 +17,34 @@ const guessNum = () => {
 };
 
 guessNum();
+
+const randomTask = () => {
+  const arr = ["+", "-", "*", "/"];
+  const num1 = Math.round(Math.random() * 100);
+  const num2 = Math.round(Math.random() * 100);
+  const symbol = arr[Math.floor(Math.random() * 4)];
+
+  const userAnswer = prompt(
+    `Напиши решение уравнения: ${num1} ${symbol} ${num2}`
+  );
+
+  let answer = null;
+
+  if (symbol === "+") {
+    answer = num1 + num2;
+  } else if (symbol === "-") {
+    answer = num1 - num2;
+  } else if (symbol === "*") {
+    answer = num1 * num2;
+  } else if (symbol === "/") {
+    answer = num1 / num2;
+  }
+
+  if (Number(userAnswer) === answer) {
+    alert("Верно");
+  } else {
+    alert("Неправильно");
+  }
+};
+
+randomTask();
