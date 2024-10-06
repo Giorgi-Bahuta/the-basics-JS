@@ -34,15 +34,25 @@ maxNum(52, 53, 49, 77, 21, 32);
 console.log(Math.floor(Math.random() * 10) + 1);
 
 //Zadanie 6
+// function randomArr(num) {
+//   const arr = [];
+//   while (arr.length < num / 2) {
+//     arr.push(Math.round(Math.random() * num));
+//   }
+//   return arr;
+// }
+
+// randomArr(6);
+
 function randomArr(num) {
   const arr = [];
-  while (arr.length < num) {
+  for (let i = 1; i <= num / 2; i++) {
     arr.push(Math.round(Math.random() * num));
   }
   return arr;
 }
 
-randomArr(5);
+randomArr(6);
 
 //Zadanie 7
 function randomNumber(num1, num2) {
