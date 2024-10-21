@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hm9.7</title>
+  </head>
+
+  <body>
+    <p class="description">Элемент 1</p>
+    <p class="description">Элемент 2</p>
+    <p class="description">Элемент 3</p>
+    <button class="btn">Удалить элемент</button>
+    <script>
+      const descriptionEl = document.querySelector(".description");
+      const btnEl = document.querySelector(".btn");
+
+      btnEl.addEventListener("click", function (e) {
+        descriptionEl.remove();
+      });
+    </script>
+  </body>
+</html>
