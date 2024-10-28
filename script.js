@@ -4,9 +4,16 @@ const guessNum = () => {
   let userNum = null;
 
   while (userNum !== randomNumber) {
-    userNum = Number(
-      prompt("Я придумал число от 1 до 100. Попробуй его угадать")
-    );
+    userNum = prompt("Я придумал число от 1 до 100. Попробуй его угадать");
+
+    // Проверка на нажатие "Отмена"
+    if (userNum === null) {
+      alert("Игра окончена.");
+      break;
+    }
+
+    userNum = Number(userNum);
+
     userNum > 100 || userNum < 1
       ? alert("Ты должен ввести цифру от 1 до 100")
       : userNum > randomNumber
@@ -16,8 +23,6 @@ const guessNum = () => {
       : alert("Верно, молодец!");
   }
 };
-
-guessNum();
 
 //Игра "Простая арифметика"
 const randomTask = () => {
@@ -49,16 +54,12 @@ const randomTask = () => {
   }
 };
 
-randomTask();
-
 //Игра "Переверни текст"
 function reverseText() {
   const userWord = String(prompt("Введи текст"));
-  const reverseWord = userWord.split(" ").reverse().join(" ");
+  const reverseWord = userWord.split("").reverse().join("");
   alert(reverseWord);
 }
-
-reverseText();
 
 //Игра "Викторина"
 function quizz() {
@@ -105,9 +106,10 @@ function quizz() {
     alert("не верно");
   }
 
-  alert(`Квиз окончен! Ты заработал ${score} балла(ов)`);
+  alert(
+    `Квиз окончен! Ты ответил(а) верно на ${score} из ${quiz.length} вопросов`
+  );
 }
-quizz();
 
 //Игра "Камень, ножницы, бумага"
 function rockPaperScissors() {
@@ -133,5 +135,3 @@ function rockPaperScissors() {
     alert(`Ты проиграл, у компьютера ${compChoice}`);
   }
 }
-
-rockPaperScissors();
