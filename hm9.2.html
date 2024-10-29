@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hm9.2</title>
+  </head>
+
+  <body>
+    <p class="text">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, at.
+    </p>
+    <button class="change-color-btn">Изменить цвет</button>
+    <script>
+      const changeColorBtnEl = document.querySelector(".change-color-btn");
+      const textEl = document.querySelector(".text");
+
+      changeColorBtnEl.addEventListener("click", function (e) {
+        textEl.style.color = "blue";
+      });
+    </script>
+  </body>
+</html>

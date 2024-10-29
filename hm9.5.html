@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hm9.5</title>
+  </head>
+
+  <body>
+    <p class="text">Lorem ipsum dolor sit.</p>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <p class="text">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quia?
+    </p>
+    <script>
+      const descriptionsEl = document.querySelectorAll(".description");
+
+      descriptionsEl.forEach((el) => {
+        el.textContent = "Новый текст";
+      });
+    </script>
+  </body>
+</html>

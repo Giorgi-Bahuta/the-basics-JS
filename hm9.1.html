@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hm9.1</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="title">Hello, World!</h1>
+    <button class="hide-title-btn">Скрыть/показать тутил</button>
+    <script>
+      const hideTitleBtnEl = document.querySelector(".hide-title-btn");
+      const titleEl = document.querySelector(".title");
+
+      hideTitleBtnEl.addEventListener("click", function (e) {
+        titleEl.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
