@@ -123,3 +123,40 @@ function rockPaperScissors() {
     alert(`Ты проиграл, у компьютера ${compChoice}`);
   }
 }
+
+//Игра "Генератор случайных цветов"
+function changeBackgroundColor() {
+  const buttonColorGanerator = document.querySelector("#buttonColorGanerator");
+  const gamesIntroEl = document.querySelector("#games-intro");
+
+  buttonColorGanerator.style.display = "block";
+
+  buttonColorGanerator.addEventListener("click", function () {
+    const letters = [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+    ];
+
+    let randomColor = "#";
+
+    for (let i = 0; i < 6; i++) {
+      randomColor += letters[Math.floor(Math.random() * 16)];
+    }
+
+    gamesIntroEl.style.backgroundColor = randomColor;
+  });
+}
