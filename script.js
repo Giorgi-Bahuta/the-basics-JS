@@ -82,28 +82,16 @@ function quizz() {
   ];
   let score = 0;
 
-  const userAnswer1 = Number(prompt(`${quiz[0].question}\n${quiz[0].options}`));
-  if (userAnswer1 === quiz[0].correctAnswer) {
-    alert("молодей");
-    score++;
-  } else {
-    alert("не верно");
-  }
-
-  const userAnswer2 = Number(prompt(`${quiz[1].question}\n${quiz[1].options}`));
-  if (userAnswer2 === quiz[1].correctAnswer) {
-    alert("молодей");
-    score++;
-  } else {
-    alert("не верно");
-  }
-
-  const userAnswer3 = Number(prompt(`${quiz[2].question}\n${quiz[2].options}`));
-  if (userAnswer3 === quiz[2].correctAnswer) {
-    alert("молодей");
-    score++;
-  } else {
-    alert("не верно");
+  for (let i = 0; i < quiz.length; i++) {
+    const userAnswer1 = Number(
+      prompt(`${quiz[i].question}\n${quiz[i].options}`)
+    );
+    if (userAnswer1 === quiz[i].correctAnswer) {
+      alert("молодец");
+      score++;
+    } else {
+      alert("не верно");
+    }
   }
 
   alert(
